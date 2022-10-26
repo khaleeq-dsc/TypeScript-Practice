@@ -1,6 +1,8 @@
+import { Influencer } from "./interfaces/Influencer";
+import { InfluencerCommission } from "./interfaces/InfluencerCommission";
 import { Input } from "./interfaces/Input";
 import { Output } from "./interfaces/Output";
-const data: Input = {
+const input: Input = {
   brandInfluencersSales: [
     {
       brandInfluencers: "good light world-***-gg-rhode",
@@ -122,6 +124,29 @@ let output: Output = {
   influencersComissions: [],
 };
 
+input.brandInfluencersSales.forEach(brandObj=>{
+  const brandInfArr:string[] = brandObj.brandInfluencers.split('-***-')
+  const brand:string = brandInfArr[0]
+  const affiliateId: string = brandInfArr[1]
+  const influencerObj: Influencer | undefined = input.influencers.find(inf => inf.promoCode === affiliateId)
+  if(influencerObj){
+    let commissionValue :number = influencerObj.commissionPercent * brandObj.total * 0.01
+    commissionValue = Math.round(commissionValue * 100) /100
+    const finalObj: InfluencerCommission = {
+      brandInfluencers: brandObj.brandInfluencers,
+      brand,
+      affiliateId,
+      commissionPercent: influencerObj.commissionPercent,
+      totalSales: brandObj.total,
+      commissionValue,
+      name:influencerObj.name ? influencerObj.name : '',
+      email:influencerObj.email,
+      influencerId: influencerObj.id
+    }
+    output.influencersComissions.push(finalObj)
+  }
+
+})
 
 
 console.log(output)
