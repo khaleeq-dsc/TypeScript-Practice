@@ -1,6 +1,6 @@
 export interface Influencer {
     id:number;
-    name:string;
+    name:string | null;
     email:string;
     commissionPercent:number;
     promoCode:string;
