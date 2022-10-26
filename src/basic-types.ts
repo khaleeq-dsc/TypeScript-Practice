@@ -20,8 +20,8 @@ let idsList: number[] = [1,2,3,5]
 let namesList : any[] = ['khaleeq',{'name':'Nouman'}]
 //console.log('namesList of type any array', namesList)
 
-function sum(a:number, b:number):void{
+export function sum(a:number, b:number):void{
     console.log(a+b)
 }
-sum(1,2)
+//sum(1,2)
 
