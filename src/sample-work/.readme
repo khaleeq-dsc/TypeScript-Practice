@@ -1,4 +1,16 @@
 //write a script that processes that input data and produces the output data from it like given in the sample data
+/* 
+Learnig Objectives:
+1- Learn How to Create Interfaces
+2- Experience how interfaces speed up coding by intellisens
+3- Experience how interfaces help use reduce errors
+4- Experience how interfaces play vital role in jointing different pieces of code
+    Imagine if there are hundereds of scripts and each script know what to provide and what to expect from other, how much code quality will improve
+5- If Interface reduced about 5 ifs in a single script, how many ifs it will remove from a software which comprises of hundreds of scripts
+6- Once input and ouput of each script is know then reusability becomes very easy
+7- Interfaces make it very easy for developer to understand project structure
+8- Interfaces can also be used by developers to tell scripts requirements that is yet to be developed.
+*/
 
 const input = {
     "brandInfluencersSales": [
@@ -117,40 +129,40 @@ const input = {
     ]
 };
 const output = {
-  isValid: true,
-  influencersComissions: [
-    {
-      brandInfluencers: 'good light world-***-gg-rhode',
-      brand: 'good light world',
-      affiliateId: 'gg-rhode',
-      commissionPercent: 5,
-      totalSales: 108,
-      commissionValue: 5.4,
-      name: 'Hailey Bieber',
-      email: 'hailey@rhode.com',
-      influencerId: 42
-    },
-    {
-      brandInfluencers: '-***-gg-inesvaan3',
-      brand: '',
-      affiliateId: 'gg-inesvaan3',
-      commissionPercent: 5,
-      totalSales: 124,
-      commissionValue: 6.2,
-      name: 'Ines M test',
-      email: 'ines+3@vaangroup.com',
-      influencerId: 62
-    },
-    {
-      brandInfluencers: 'Kiramoon-***-gg-rhode',
-      brand: 'Kiramoon',
-      affiliateId: 'gg-rhode',
-      commissionPercent: 5,
-      totalSales: 38,
-      commissionValue: 1.9,
-      name: 'Hailey Bieber',
-      email: 'hailey@rhode.com',
-      influencerId: 42
-    }
-  ]
+    isValid: true,
+    influencersComissions: [
+        {
+            brandInfluencers: 'good light world-***-gg-rhode',
+            brand: 'good light world',
+            affiliateId: 'gg-rhode',
+            commissionPercent: 5,
+            totalSales: 108,
+            commissionValue: 5.4,
+            name: 'Hailey Bieber',
+            email: 'hailey@rhode.com',
+            influencerId: 42
+        },
+        {
+            brandInfluencers: '-***-gg-inesvaan3',
+            brand: '',
+            affiliateId: 'gg-inesvaan3',
+            commissionPercent: 5,
+            totalSales: 124,
+            commissionValue: 6.2,
+            name: 'Ines M test',
+            email: 'ines+3@vaangroup.com',
+            influencerId: 62
+        },
+        {
+            brandInfluencers: 'Kiramoon-***-gg-rhode',
+            brand: 'Kiramoon',
+            affiliateId: 'gg-rhode',
+            commissionPercent: 5,
+            totalSales: 38,
+            commissionValue: 1.9,
+            name: 'Hailey Bieber',
+            email: 'hailey@rhode.com',
+            influencerId: 42
+        }
+    ]
 }
